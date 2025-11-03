@@ -99,7 +99,7 @@ body{
 
 /* ///////////////////////////////////////////// SingUP Page */
 
-.signUpForm{
+.signUpForm,.loginForm{
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -123,7 +123,7 @@ label{
     font-size: 20px;
     width: 20px;
 }
-.submit{
+.submit,.loginSubmit{
      background-color: var(--backGround-color);
     color: rgb(255, 255, 255);
     font-size: 1.5rem;
@@ -286,4 +286,197 @@ input:focus {
     background-color: var(--primary-color);
 
     
+}
+.validationMassage{
+    text-align: left;
+    margin: 0;
+    margin-left: 12%;
+    color: red;
+    font-size: 15px;
+}
+.massageAndSignup{
+    display: flex;
+    flex-direction: row;
+}
+
+/* ////////home */
+.menu{
+    display: flex;
+    text-align: center;
+    gap: 8px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+.icon{
+    /* text-align: center; */
+    margin: 16px auto;
+    color: var(--backGround-color);
+}
+.menuDiv{
+    display: flex;
+    gap: 3rem;
+}
+.profileHome{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+.updates{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    height: 39%;
+}
+.update1,.update2{
+    background-color: white;
+    border-radius: 10px;
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    
+
+}
+.updateText{
+    font-size: 80%;
+    padding: 10px;
+}
+.updateImg{
+    width: 45%;
+}
+.update1:hover{
+    transform: translateY(-1rem);
+    transition:1s;
+    box-shadow: 0 4.2rem 5.4rem rgb(221, 220, 207);
+}
+.activity{
+    background-color: aliceblue;
+    width: 60%;
+    text-align: center;
+    margin-left: 25px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+}
+.activityDiv{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 25%;
+    text-align: center;
+    
+}
+.activityDivText{
+     margin-left: 10px;
+}
+ .activityTiltle{
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 auto;
+    margin-top: 25px;
+    text-align: left;
+    color: rgb(110, 110, 110);
+ }
+  .activityNum{
+    font-size: 20px;
+    font-weight: 700;
+    margin: 2px auto;
+    text-align: left;
+ }
+.activityIcon,.activityIcon2,.activityIcon3,.activityIcon4{
+    color: var(--backGround-color);
+    font-size: 2rem;
+    text-align: center;
+    margin: 20px 0 10px 10px;
+    padding: .5rem;
+    border: .5px solid black; 
+    border-color: rgb(150, 183, 183);
+    border-radius: 10px;
+}
+.activityIcon2{color: #ba7ce7;}
+.activityIcon3{color: #e8cb28;}
+.activityIcon4{color: #e4683b;}
+.activityIconDiv{
+    width: 3rem;
+}
+.activityTi{
+    text-align: left;
+    font-size: 20px;
+    margin: 0;
+    margin-left: 27px;
+    
+}
+.exams{
+    width: 80%;
+    height: 300px;
+    background-color: #d3e9f4;
+}
+.exams{
+    background-color: aliceblue;
+    width: 60%;
+    text-align: center;
+    margin-left: 25px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+}
+.examDiv{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 44%;
+    height: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    margin: 15px;
+    border-radius: 10px;
+    align-items: center;
+    
+}
+.examTitle{
+    font-size: 20px;
+    margin: 0 auto;
+    margin-top: 2px;
+}
+.examDescription{
+    font-size: 10px;
+    margin: 0 auto;
+}
+.examTime{
+    font-size: 13px;
+}
+.startExam{
+    display: flex;
+gap: 6px;
+text-decoration: none;
+align-items: center;
+font-size: 20px;
+margin: 0 auto;
+}
+.startIcon{
+        color: var(--backGround-color);
+    font-size: 1rem;
+    text-align: center;
+    padding: .5rem;
+    border: .5px solid black; 
+    border-color: rgb(150, 183, 183);
+    border-radius: 10px;
+}
+/* .startButton{
+    font-size: 25px;
+    margin-left: 7px;
+    margin-top: 23px;
+} */
+.examImg{
+}
+.imgExamDiv{
+    margin: 0 auto;
+    width: 100%;
+    height: 80px;
+    /* background-color: red; */
+    background-image: url(/assets/login.png);
+    background-size: cover;
+
 }

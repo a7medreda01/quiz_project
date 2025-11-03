@@ -22,34 +22,32 @@
                     <h4>Time Remaning</h4>
                     <h1>09:01</h1>
                 </div>
-                 <a href="/html/Finished.html" class="submitQuiz btn">Submit</a>
+                 <a href="/html/Finished.html" class="submitQuiz btn" onclick="calScore()">Submit</a>
             </div>
-                    <div class="question">
+            
             <div class="question">
                 <h4>Question 1 of 10</h4>
-                <h2 class="questionText">Which of the following is a popular programming language for 
-                    developing multi webpages?
-                </h2>
+                <h2 class="questionText"></h2>
             </div>
             <div class="answers">
-                <button class="answer1 answerBtn">A. answer1</button>
-                <button class="answer2 answerBtn">B. answer2</button>
-                <button class="answer3 answerBtn">C. answer3</button>
-                <button class="answer4 answerBtn">D. answer4</button>
+                <button class="ans1 answerBtn" onclick="selectAnsower('ans1')"></button>
+                <button class="ans2 answerBtn" onclick="selectAnsower('ans2')"></button>
+                <button class="ans3 answerBtn" onclick="selectAnsower('ans3')"></button>
+                <button class="ans4 answerBtn" onclick="selectAnsower('ans4')"></button>
             </div>
             <div class="nextAndBrev">
-                <button class="prev prevBtn">Prev</button>
-                <button class="btn1 numBtn">1</button>
-                <button class="btn2 numBtn">2</button>
-                <button class="btn3 numBtn">3</button>
-                <button class="btn4 numBtn">4</button>
-                <button class="btn5 numBtn">5</button>
-                <button class="btn6 numBtn">6</button>
-                <button class="btn7 numBtn">7</button>
-                <button class="btn8 numBtn">8</button>
-                <button class="btn9 numBtn">9</button>
-                <button class="btn10 numBtn">10</button>
-                <button class="next nextBtn">Next</button>
+                <button class="prev prevBtn" onclick="previousQuestion(),resetColorButton()">Prev</button>
+                <button class="btn1 numBtn" id="1"  onclick="buttonNumQuestion(1) ,resetColorButton()">1</button>
+                <button class="btn2 numBtn" id="2" onclick="buttonNumQuestion(2) ,resetColorButton()">2</button>
+                <button class="btn3 numBtn" id="3" onclick="buttonNumQuestion(3) ,resetColorButton()">3</button>
+                <button class="btn4 numBtn" id="4" onclick="buttonNumQuestion(4) ,resetColorButton()">4</button>
+                <button class="btn5 numBtn" id="5" onclick="buttonNumQuestion(5) ,resetColorButton()">5</button>
+                <button class="btn6 numBtn" id="6" onclick="buttonNumQuestion(6) ,resetColorButton()">6</button>
+                <button class="btn7 numBtn" id="7" onclick="buttonNumQuestion(7) ,resetColorButton()">7</button>
+                <button class="btn8 numBtn" id="8" onclick="buttonNumQuestion(8) ,resetColorButton()">8</button>
+                <button class="btn9 numBtn" id="9" onclick="buttonNumQuestion(9) ,resetColorButton()">9</button>
+                <button class="btn10 numBtn" onclick="buttonNumQuestion(10)">10</button>
+                <button class="next nextBtn" onclick="nextQuestion() ,resetColorButton()">Next</button>
 
             </div>
         </div>
