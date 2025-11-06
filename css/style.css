@@ -196,9 +196,10 @@ input:focus {
 }
 .submitQuiz{
     background-color:var(--backGround-color);
+    position: fixed;
     color: rgb(255, 255, 255);
     font-size: 1rem;
-    margin-top: 30px;
+    margin: 50px 20px auto auto;
     height: 20px;
     border-radius: 9px;
     border: none;
@@ -265,7 +266,7 @@ input:focus {
 }
 .numBtn{
     width: 60px;
-    height: 30px;
+    height: 35px;
     border-radius: 8px;
     border-width: 1px;
     border-color: rgb(135, 134, 134);
@@ -274,16 +275,17 @@ input:focus {
     cursor: pointer;
     background-color: white;
 }
-.prevBtn ,.nextBtn{
-    width: 75px;
-    height: 30px;
+.prevBtn ,.nextBtn, .mark-btn{
+    width: 80px;
+    height: 35px;
     border-radius: 8px;
     border-width: 1px;
     border-color: rgb(135, 134, 134);
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 350;
     cursor: pointer;
-    background-color: var(--primary-color);
+    background-color: gray;
+    color:white;
 
     
 }
@@ -469,8 +471,8 @@ margin: 0 auto;
     margin-left: 7px;
     margin-top: 23px;
 } */
-.examImg{
-}
+/* .examImg{
+} */
 .imgExamDiv{
     margin: 0 auto;
     width: 100%;
@@ -479,4 +481,52 @@ margin: 0 auto;
     background-image: url(/assets/login.png);
     background-size: cover;
 
+}
+
+/* marked list */
+
+.marked-list {
+  position: fixed;
+  right: 25px;
+  top: 100px;
+  background: #f2f2f2;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  width: 300px;
+  height: 300px;
+}
+
+.marked-list h3 {
+  font-size: 15px;
+  margin-bottom: 8px;
+  color: #000000;
+  text-align: center;
+}
+
+.question-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+
+.marked-btn {
+  background: #fff;
+  color: #333;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.marked-btn:hover {
+  background: #8f8e8e;
+}
+
+.marked-btn.marked {
+  background: #007bff;
+  color: #fff;
+  border-color: #007bff;
 }

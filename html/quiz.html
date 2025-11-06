@@ -19,10 +19,9 @@
         <div class="quizDiv">
             <div class="timerAndSubmit">
                 <div class="timer">
-                    <h4>Time Remaning</h4>
+                    <h4>Time Remaining</h4>
                     <h1>09:01</h1>
                 </div>
-                 <a href="/html/Finished.html" class="submitQuiz btn" onclick="calScore()">Submit</a>
             </div>
             
             <div class="question">
@@ -35,28 +34,46 @@
                 <button class="ans3 answerBtn" onclick="selectAnsower('ans3')"></button>
                 <button class="ans4 answerBtn" onclick="selectAnsower('ans4')"></button>
             </div>
-            <div class="nextAndBrev">
-                <button class="prev prevBtn" onclick="previousQuestion(),resetColorButton()">Prev</button>
-                <button class="btn1 numBtn" id="1"  onclick="buttonNumQuestion(1) ,resetColorButton()">1</button>
-                <button class="btn2 numBtn" id="2" onclick="buttonNumQuestion(2) ,resetColorButton()">2</button>
-                <button class="btn3 numBtn" id="3" onclick="buttonNumQuestion(3) ,resetColorButton()">3</button>
-                <button class="btn4 numBtn" id="4" onclick="buttonNumQuestion(4) ,resetColorButton()">4</button>
-                <button class="btn5 numBtn" id="5" onclick="buttonNumQuestion(5) ,resetColorButton()">5</button>
-                <button class="btn6 numBtn" id="6" onclick="buttonNumQuestion(6) ,resetColorButton()">6</button>
-                <button class="btn7 numBtn" id="7" onclick="buttonNumQuestion(7) ,resetColorButton()">7</button>
-                <button class="btn8 numBtn" id="8" onclick="buttonNumQuestion(8) ,resetColorButton()">8</button>
-                <button class="btn9 numBtn" id="9" onclick="buttonNumQuestion(9) ,resetColorButton()">9</button>
-                <button class="btn10 numBtn" onclick="buttonNumQuestion(10)">10</button>
-                <button class="next nextBtn" onclick="nextQuestion() ,resetColorButton()">Next</button>
-
+            <div class="marked-list">
+            <h3>Marked Questions</h3>
+            <div class="question-buttons">
+                <button class="marked-btn" onclick="buttonNumQuestion(1)">Q1</button>
+                <button class="marked-btn" onclick="buttonNumQuestion(2)">Q2</button>
+                <button class="marked-btn" onclick="buttonNumQuestion(3)">Q3</button>
+                <button class="marked-btn" onclick="buttonNumQuestion(4)">Q4</button>
+                <button class="marked-btn" onclick="buttonNumQuestion(5)">Q5</button>
+                <button class="marked-btn" onclick="buttonNumQuestion(6)">Q6</button>
+                <button class="marked-btn" onclick="buttonNumQuestion(7)">Q7</button>
+                <button class="marked-btn" onclick="buttonNumQuestion(8)">Q8</button>
+                <button class="marked-btn" onclick="buttonNumQuestion(9)">Q9</button>
+                <button class="marked-btn" onclick="buttonNumQuestion(10)">Q10</button>
             </div>
         </div>
+        
+        <div class="nextAndBrev">
+            <button class="prev prevBtn" onclick="previousQuestion(),resetColorButton()">Prev</button>
+            <button class="btn1 numBtn" id="1"  onclick="buttonNumQuestion(1) ,resetColorButton()">1</button>
+            <button class="btn2 numBtn" id="2" onclick="buttonNumQuestion(2) ,resetColorButton()">2</button>
+            <button class="btn3 numBtn" id="3" onclick="buttonNumQuestion(3) ,resetColorButton()">3</button>
+            <button class="btn4 numBtn" id="4" onclick="buttonNumQuestion(4) ,resetColorButton()">4</button>
+            <button class="btn5 numBtn" id="5" onclick="buttonNumQuestion(5) ,resetColorButton()">5</button>
+            <button class="btn6 numBtn" id="6" onclick="buttonNumQuestion(6) ,resetColorButton()">6</button>
+            <button class="btn7 numBtn" id="7" onclick="buttonNumQuestion(7) ,resetColorButton()">7</button>
+            <button class="btn8 numBtn" id="8" onclick="buttonNumQuestion(8) ,resetColorButton()">8</button>
+            <button class="btn9 numBtn" id="9" onclick="buttonNumQuestion(9) ,resetColorButton()">9</button>
+            <button class="btn10 numBtn" onclick="buttonNumQuestion(10)">10</button>
+            <button class="next nextBtn" onclick="nextQuestion() ,resetColorButton()">Next</button>
+            <button class="mark-btn" onclick="markQuestion()">Mark</button>
+            <a href="/html/result.html" class="submitQuiz btn" onclick="calScore()">Submit</a>
+            
         </div>
-
+        </div>
+    </div>
+    
 
     </section>
    
    
-    <script src="/javaScript/script.js"></script>
+    <script src="/javaScript/quiz.js"></script>
 </body>
 </html>
