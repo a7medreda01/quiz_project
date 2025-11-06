@@ -259,20 +259,18 @@ function calScore() {
   localStorage.setItem("score", JSON.stringify(score));
 }
 
-var markedQuestions = []; // مصفوفة لتخزين الأسئلة المتعلمة
+var markedQuestions = [];
 var markBtn = document.querySelector(".mark-btn");
 
 function markQuestion() {
-  var currentIndex = index; // نفس المتغير اللي عندك بيمثل السؤال الحالي
-  var buttonList = document.querySelectorAll(".numBtn"); // أزرار الأسئلة
+  var currentIndex = index;
+  var buttonList = document.querySelectorAll(".numBtn");
 
-  // لو السؤال مش متعلم عليه
   if (markedQuestions.indexOf(currentIndex) === -1) {
     markedQuestions.push(currentIndex);
-    buttonList[currentIndex].classList.add("marked"); // نضيف له كلاس التظليل
-    markBtn.textContent = "Unmark"; // نغير نص الزرار
+    buttonList[currentIndex].classList.add("marked");
+    markBtn.textContent = "Unmark";
   } else {
-    // لو متعلم عليه بالفعل، نشيله
     var pos = markedQuestions.indexOf(currentIndex);
     markedQuestions.splice(pos, 1);
     buttonList[currentIndex].classList.remove("marked");
