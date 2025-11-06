@@ -490,7 +490,7 @@ margin: 0 auto;
   right: 25px;
   top: 100px;
   background: #f2f2f2;
-  border: 1px solid #ffffff;
+  border: 1px solid #cfcfcf;
   border-radius: 20px;
   padding: 40px;
   width: 300px;
@@ -513,7 +513,7 @@ margin: 0 auto;
 
 .marked-btn {
   background: #fff;
-  color: #333;
+  color: #000000;
   border: 1px solid #bbb;
   border-radius: 5px;
   padding: 4px 8px;
