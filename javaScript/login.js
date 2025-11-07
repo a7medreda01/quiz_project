@@ -1,4 +1,5 @@
 // login
+var userData = JSON.parse(localStorage.getItem("userForm"));
 var loginEmail = userData.email;
 var loginPassword = userData.password;
 console.log(loginEmail, loginPassword);
