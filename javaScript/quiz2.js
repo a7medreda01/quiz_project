@@ -7,126 +7,127 @@
 
 var questions = [
   {
-    question: "What is the capital city of France?",
+    question: "What does HTML stand for?",
     answer: [
       {
-        ans1: "Berlin",
-        ans2: "Madrid",
-        ans3: "Paris",
-        ans4: "Rome",
-      },
-    ],
-    correct: "ans3",
-  },
-  {
-    question: "Which planet is known as the Red Planet?",
-    answer: [
-      {
-        ans1: "Earth",
-        ans2: "Mars",
-        ans3: "Jupiter",
-        ans4: "Venus",
-      },
-    ],
-    correct: "ans2",
-  },
-  {
-    question: "Who wrote 'Romeo and Juliet'?",
-    answer: [
-      {
-        ans1: "William Shakespeare",
-        ans2: "Charles Dickens",
-        ans3: "Leo Tolstoy",
-        ans4: "Mark Twain",
+        ans1: "Hyper Text Markup Language",
+        ans2: "High Transfer Machine Language",
+        ans3: "Hyperlink and Text Management Language",
+        ans4: "Home Tool Markup Language",
       },
     ],
     correct: "ans1",
   },
   {
-    question: "Which ocean is the largest in the world?",
+    question: "Which HTML tag is used to display the largest heading?",
     answer: [
       {
-        ans1: "Atlantic Ocean",
-        ans2: "Indian Ocean",
-        ans3: "Pacific Ocean",
-        ans4: "Arctic Ocean",
+        ans1: "<head>",
+        ans2: "<h6>",
+        ans3: "<h1>",
+        ans4: "<header>",
       },
     ],
     correct: "ans3",
   },
   {
-    question: "What is the chemical symbol for water?",
+    question: "Which tag is used to create a hyperlink in HTML?",
     answer: [
       {
-        ans1: "O2",
-        ans2: "H2O",
-        ans3: "CO2",
-        ans4: "NaCl",
-      },
-    ],
-    correct: "ans2",
-  },
-  {
-    question: "How many continents are there on Earth?",
-    answer: [
-      {
-        ans1: "5",
-        ans2: "6",
-        ans3: "7",
-        ans4: "8",
-      },
-    ],
-    correct: "ans3",
-  },
-  {
-    question: "Which language is used to style web pages?",
-    answer: [
-      {
-        ans1: "HTML",
-        ans2: "CSS",
-        ans3: "JavaScript",
-        ans4: "Python",
-      },
-    ],
-    correct: "ans2",
-  },
-  {
-    question: "What is the freezing point of water?",
-    answer: [
-      {
-        ans1: "0°C",
-        ans2: "32°C",
-        ans3: "100°C",
-        ans4: "-10°C",
+        ans1: "<a>",
+        ans2: "<link>",
+        ans3: "<href>",
+        ans4: "<url>",
       },
     ],
     correct: "ans1",
   },
   {
-    question: "Which gas do humans need to breathe?",
+    question: "Which attribute is used to provide an image source in HTML?",
     answer: [
       {
-        ans1: "Carbon Dioxide",
-        ans2: "Oxygen",
-        ans3: "Hydrogen",
-        ans4: "Nitrogen",
+        ans1: "link",
+        ans2: "src",
+        ans3: "href",
+        ans4: "path",
       },
     ],
     correct: "ans2",
   },
   {
-    question: "Which country is famous for the Great Wall?",
+    question: "What is the correct HTML element for inserting a line break?",
     answer: [
       {
-        ans1: "India",
-        ans2: "China",
-        ans3: "Japan",
-        ans4: "Korea",
+        ans1: "<break>",
+        ans2: "<lb>",
+        ans3: "<br>",
+        ans4: "<line>",
+      },
+    ],
+    correct: "ans3",
+  },
+  {
+    question: "Which tag is used to display a numbered list?",
+    answer: [
+      {
+        ans1: "<ul>",
+        ans2: "<ol>",
+        ans3: "<li>",
+        ans4: "<dl>",
       },
     ],
     correct: "ans2",
+  },
+  {
+    question: "Which tag is used to insert an image in HTML?",
+    answer: [
+      {
+        ans1: "<img>",
+        ans2: "<image>",
+        ans3: "<picture>",
+        ans4: "<src>",
+      },
+    ],
+    correct: "ans1",
+  },
+  {
+    question: "Which HTML element is used to define a table row?",
+    answer: [
+      {
+        ans1: "<tr>",
+        ans2: "<td>",
+        ans3: "<th>",
+        ans4: "<table>",
+      },
+    ],
+    correct: "ans1",
+  },
+  {
+    question: "Which attribute specifies an alternate text for an image?",
+    answer: [
+      {
+        ans1: "alt",
+        ans2: "title",
+        ans3: "src",
+        ans4: "description",
+      },
+    ],
+    correct: "ans1",
+  },
+  {
+    question: "What is the correct way to comment in HTML?",
+    answer: [
+      {
+        ans1: "// comment",
+        ans2: "/* comment */",
+        ans3: "<!-- comment -->",
+        ans4: "# comment",
+      },
+    ],
+    correct: "ans3",
   },
 ];
+
 
 var questionText = document.querySelector(".questionText");
 
@@ -211,7 +212,7 @@ var data1 = [];
 function resetColorButton() {
   var ansowerButtons = document.querySelectorAll(".answerBtn");
 
-  var userAns = JSON.parse(localStorage.getItem("userAnsower"));
+  var userAns = JSON.parse(localStorage.getItem("userAnsower2"));
   console.log(userAns[4]);
 
   ansowerButtons.forEach((btn) => {
@@ -229,7 +230,7 @@ function resetColorButton() {
 
 function selectAnsower(ans) {
   data1[index] = [ans];
-  localStorage.setItem("userAnsower", JSON.stringify(data1));
+  localStorage.setItem("userAnsower2", JSON.stringify(data1));
   var ansowerButton = document.querySelector(`.${ans}`);
   var ansowerButtons = document.querySelectorAll(".answerBtn");
 
@@ -247,8 +248,8 @@ function selectAnsower(ans) {
   ansowerButton.style.backgroundColor = "green";
 }
 var score = 0;
-function calScore() {
-  var answerList = JSON.parse(localStorage.getItem("userAnsower"));
+function calScore2() {
+  var answerList = JSON.parse(localStorage.getItem("userAnsower2"));
   for (i = 0; i < 10; i++) {
     // console.log(`${answerList[i]},${questions[i].correct}`)
     if (answerList[i] == questions[i].correct) {
@@ -257,7 +258,7 @@ function calScore() {
 
   }
 
-  localStorage.setItem("score", JSON.stringify(score));
+  localStorage.setItem("score2", JSON.stringify(score));
 }
 var markedQuestions = [];
 var markBtn = document.querySelector(".mark-btn");
@@ -295,7 +296,6 @@ var totalSeconds = 10 * 60
       var minutes = Math.floor(totalSeconds / 60);
       var seconds = totalSeconds % 60;
 
-      // عرض الوقت بصيغة 00:00
       timerElement.textContent = 
         `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
         if (minutes==9){timerElement.style.color="green"}
@@ -311,5 +311,8 @@ var totalSeconds = 10 * 60
       }
     }, 1000);
 
-
+    var startExamButton = document.querySelector(".startExam")
+    if (score >0){
+      startExamButton.textContent=""
+    }
     //////quiz

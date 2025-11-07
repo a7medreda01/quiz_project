@@ -32,4 +32,26 @@
 
 // result
 
+    var Presence =document.querySelector(".Presence")
+  var score = JSON.parse(localStorage.getItem("score"));
 
+    Presence.textContent=`${score} from 10`;
+var examButton =document.querySelector(".startExam")
+if (score>0){
+    examButton.textContent=`Your score : ${score} `
+examButton.style.color="red"
+
+}
+  var score2 = JSON.parse(localStorage.getItem("score2"));
+
+var examButton2 =document.querySelector(".startExam2")
+if (score2>0){
+    examButton2.textContent=`Your score : ${score2} `
+examButton2.style.color="red"
+examButton2.style.textDecoration = "none";
+
+
+}
+var totalScore=score+score2;
+var Test=document.querySelector(".Test")
+Test.textContent=totalScore

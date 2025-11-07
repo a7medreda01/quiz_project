@@ -404,6 +404,19 @@ input:focus {
   margin: 0;
   margin-left: 27px;
 }
+.examsDiv{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-between;
+}
+.imgHome{
+    width: 40%;
+    margin: 20px;
+    background-image: url(/assets/student-11208.png);
+    background-size: cover;  
+    
+}
 .exams {
   width: 80%;
   height: 300px;
@@ -435,7 +448,7 @@ input:focus {
 .examTitle {
   font-size: 20px;
   margin: 0 auto;
-  margin-top: 2px;
+  margin-top: 7px;
 }
 .examDescription {
   font-size: 10px;
@@ -480,15 +493,15 @@ input:focus {
 /* marked list */
 
 .marked-list {
-  position: fixed;
+  position: absolute;
   right: 25px;
-  top: 100px;
+  top:160px;
   background: #f2f2f2;
   border: 1px solid #cfcfcf;
   border-radius: 20px;
   padding: 40px;
-  width: 300px;
-  height: 300px;
+  width: 20%;
+  height: 30%;
 }
 
 .marked-list h3 {

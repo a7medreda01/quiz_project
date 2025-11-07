@@ -12,3 +12,4 @@ var percentContainer = document.querySelector(".percentage-container");
 percentContainer.textContent = percentage + "%";
 var scoreValue = document.querySelector(".scoreValue");
 scoreValue.textContent = userResult;
+//////////////////
