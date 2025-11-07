@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         password: passwordIn.value,
       };
       localStorage.setItem("userForm", JSON.stringify(userForm));
-
+      window.location.href="home.html";
       console.log("Saved:", userForm);
     }
   });
@@ -53,3 +53,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
