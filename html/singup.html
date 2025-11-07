@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="/css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header class="header">
@@ -14,21 +16,21 @@
     </div>
     </header>
     <section class="bodySection">
-            <form  class="signUpForm" action="home.html" method="get" >
+            <form  class="signUpForm" action="login.html" method="GET" onsubmit="return validateForm(event)">
                 <div class="form-group nameInput">
                 <label for="">Name</label>
-                <input class="input nameIn" type="text" name="name" placeholder="Enter Your First Name" >
-                <input class="input lastNameIn" type="text" name="name" placeholder="Enter Your Last Name">
+                <input class="input nameIn" type="text" name="name" placeholder="Enter Your First Name" oninput="validateInputText()" >
+                <input class="input lastNameIn" type="text" name="name" placeholder="Enter Your Last Name"  oninput="validateInputText2()">
                 </div>
                 <div class="form-group">
                 <label for="">Email</label>
-                <input class="input emailIn" type="email" name="email" placeholder="Enter Your Email">
+                <input class="input emailIn" type="email" name="email" placeholder="Enter Your Email" oninput="validateInputEmail()">
                 </div>
                 <div class="form-group">
                 <label for="">Password</label>
-                <input class="input passwordIn" type="password" name="password" placeholder="Create Password">
+                <input class="input passwordIn" type="password" name="password" placeholder="Create Password" oninput="validateInputPassword()">
                 </div>
-                <div class="validationMessage">validationMessage</div>
+                <div class="validationMessage"></div>
                 <input class="submit" type="submit" name="submit" >
                 <h1 class="alredyHave">Already Have Account <a href="login.html">Login</a></h1>
                 

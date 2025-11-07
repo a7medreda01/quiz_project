@@ -1,17 +1,30 @@
       @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
 
 :root {
-  font-family: "Monrope",sans-serif;
+ 
   --primary-color: #d3e9f4;
 }
 :root {
-  --backGround-color: rgb(29, 155, 27);
+  --backGround-color: rgb(67, 154, 205);
+  
 }
+.noto-sans-arabic {
+  font-family: "Noto Sans Arabic", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
 body {
   background-image: url(/assets/backGround.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0;
+ line-height: 1.6;
+  font-family: "Noto Sans Arabic", sans-serif;
+
+
 }
 .header {
   display: flex;
@@ -38,6 +51,29 @@ body {
   border: none;
   text-decoration: none;
   cursor: pointer;
+}
+.btn:hover {
+  background-color: rgb(37, 108, 149);
+  color: rgb(255, 255, 255);
+  font-size: 1.1rem;
+  margin-left: 10px;
+  padding: 0.8rem 2rem;
+  border-radius: 9px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.6s ease;
+}
+.getStartedButton:hover {
+    background-color: rgb(15, 69, 127);
+    color: rgb(255, 255, 255);
+    font-size: 1.6rem;
+    padding: 1rem 3rem;
+    border-radius: 9px;
+    border: none;
+    text-decoration: none;
+  transition: all 0.6s ease;
+    
 }
 .websiteLogo {
   width: 200px;
