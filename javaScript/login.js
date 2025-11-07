@@ -19,5 +19,5 @@ document.addEventListener("DOMContentLoaded", function () {
 //     } else {
 //       validationMassage.textContent = "Email or Password not valid";
 //     }
-//   });
-// });
+  });
+});
