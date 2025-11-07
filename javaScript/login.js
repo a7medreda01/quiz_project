@@ -10,14 +10,14 @@ document.addEventListener("DOMContentLoaded", function () {
   loginForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
-//     if (
-//       loginEmail == emailLogin.value &&
-//       loginPassword == passwordLogin.value
-//     ) {
-//       console.log("Login Success");
-//       window.location.href = "home.html";
-//     } else {
-//       validationMassage.textContent = "Email or Password not valid";
-//     }
+    if (
+      loginEmail == emailLogin.value &&
+      loginPassword == passwordLogin.value
+    ) {
+      console.log("Login Success");
+      window.location.href = "home.html";
+    } else {
+      validationMassage.textContent = "Email or Password not valid";
+    }
   });
 });
