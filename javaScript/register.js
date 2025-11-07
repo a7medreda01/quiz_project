@@ -1,3 +1,4 @@
+var userData = JSON.parse(localStorage.getItem("userForm"));
 var user = document.querySelector(".nameIn");
 var lastNameIn = document.querySelector(".lastNameIn");
 var emailIn = document.querySelector(".emailIn");
@@ -28,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-var userData = JSON.parse(localStorage.getItem("userForm"));
 
 // login
 var loginEmail = userData.email;
