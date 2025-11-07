@@ -206,7 +206,7 @@ buttonOthers.forEach((btn) => {
   });
 });
 
-//part 2 >> save ansower
+//part 2 >> save answer
 var data1 = [];
 function resetColorButton() {
   var ansowerButtons = document.querySelectorAll(".answerBtn");
@@ -304,7 +304,7 @@ var totalSeconds = 10 * 60
         if (minutes<1){timerElement.style.color="red"}
       if (totalSeconds <= 0) {
         clearInterval(timer);
-        timerElement.textContent = "Finshed⏰";
+        timerElement.textContent = "Finished⏰";
         setTimeout(() => {
           window.location.href = "result.html";
         }, 1000);
