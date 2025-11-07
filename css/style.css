@@ -5,7 +5,7 @@
   --backGround-color: rgb(3 127 197);
 }
 body {
-  background-image: url(/assets/backGround.jpg);
+  background-image: url(/assets/home/quizbg.png);
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0;
@@ -482,7 +482,8 @@ input:focus {
 .marked-list {
   position: fixed;
   right: 25px;
-  top: 100px;
+  top: 128px;
+  margin: auto;
   background: #f2f2f2;
   border: 1px solid #cfcfcf;
   border-radius: 20px;
@@ -499,7 +500,7 @@ input:focus {
 }
 
 .question-buttons {
-  display: flex;
+  display: inline-block;
   flex-wrap: wrap;
   gap: 6px;
   justify-content: center;
