@@ -1,6 +1,3 @@
-
-
-
 //  //// home
 
 // var fullName = userData.firstName + " " + userData.lastName;
@@ -162,6 +159,7 @@ function nextQuestion() {
     btn.style.backgroundColor = "lightgray";
     buttonOthers[index].style.backgroundColor = "green";
   });
+  updateMarkButton();
 }
 
 function previousQuestion() {
@@ -181,6 +179,7 @@ function previousQuestion() {
     btn.style.backgroundColor = "lightgray";
     buttonOthers[index].style.backgroundColor = "green";
   });
+  updateMarkButton();
 }
 function buttonNumQuestion(id) {
   index = id - 1;
@@ -195,6 +194,7 @@ function buttonNumQuestion(id) {
 
   buttonOthers.forEach((btn) => (btn.style.backgroundColor = "lightgray"));
   buttonOthers[index].style.backgroundColor = "green";
+  updateMarkButton();
 }
 
 var buttonOthers = document.querySelectorAll(".numBtn");
@@ -230,13 +230,13 @@ function resetColorButton() {
 function selectAnsower(ans) {
   data1[index] = [ans];
   localStorage.setItem("userAnsower", JSON.stringify(data1));
-   var ansowerButton = document.querySelector(`.${ans}`);
+  var ansowerButton = document.querySelector(`.${ans}`);
   var ansowerButtons = document.querySelectorAll(".answerBtn");
 
   ansowerButtons.forEach((btn) => {
     btn.style.backgroundColor = "white";
     // btn.addEventListener("click", () => {
-      ansowerButton.style.backgroundColor = "green";
+    ansowerButton.style.backgroundColor = "green";
     // });
   });
 
@@ -258,26 +258,29 @@ function calScore() {
 
   localStorage.setItem("score", JSON.stringify(score));
 }
-
 var markedQuestions = [];
 var markBtn = document.querySelector(".mark-btn");
 
 function markQuestion() {
   var currentIndex = index;
-  var buttonList = document.querySelectorAll(".numBtn");
+  var markedBtns = document.querySelectorAll(".marked-btn");
 
   if (markedQuestions.indexOf(currentIndex) === -1) {
     markedQuestions.push(currentIndex);
-    buttonList[currentIndex].classList.add("marked");
+    markedBtns[currentIndex].classList.add("marked");
     markBtn.textContent = "Unmark";
   } else {
     var pos = markedQuestions.indexOf(currentIndex);
     markedQuestions.splice(pos, 1);
-    buttonList[currentIndex].classList.remove("marked");
+    markedBtns[currentIndex].classList.remove("marked");
     markBtn.textContent = "Mark";
   }
 }
-// // --------- Marked List ------
-// var markBtn = document.querySelector(".mark-btn");
-// var markedList = document.querySelector(".marked-list");
-
+function updateMarkButton() {
+  var currentIndex = index;
+  if (markedQuestions.indexOf(currentIndex) !== -1) {
+    markBtn.textContent = "Unmark";
+  } else {
+    markBtn.textContent = "Mark";
+  }
+}
